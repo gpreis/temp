@@ -1,4 +1,4 @@
-class CustomerController < ApplicationController.rb
+class CustomerController < ApplicationController
   before_action :find_customers, only: :index
 
   def index
