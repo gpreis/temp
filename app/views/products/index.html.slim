@@ -1,0 +1,22 @@
+section.header
+  h2.title Produtos
+  h4 Listagem
+
+table.u-full-width
+  thead
+    tr
+      th #
+      th Nome
+      th Categoria
+      th
+  tbody
+    - @products.each do |product|
+      tr
+        td = product.id
+        td = product.name
+        td = product.product_category_name
+        td
+          a = link_to t(:delete), product_path(product), method: :delete
+
+= link_to t(:add), new_product_path, class: 'button button-primary'
+

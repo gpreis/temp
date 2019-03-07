@@ -1,0 +1,6 @@
+h5 Criar uma categoria de produto
+
+= simple_form_for @product do |f|
+  = f.input :name
+  = f.association :product_category
+  = f.submit
